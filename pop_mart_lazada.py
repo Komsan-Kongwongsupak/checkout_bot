@@ -5,7 +5,8 @@ from selenium.webdriver.chrome.service import Service
 import time
 from datetime import datetime
 
-ORDER_TIME = datetime(2024, 5, 4, 21, 18)
+ORDER_TIME = datetime(2024, 5, 4, 23, 59, 59, 999000)
+# ORDER_TIME = datetime(2024, 5, 4, 23, 48, 59, 999000)
 
 def get_element(driver, input):
     return driver.find_element(By.CSS_SELECTOR, input)
@@ -17,13 +18,13 @@ driver.get("https://member.lazada.co.th/user/login?spm=a2o4m.home-th.header.d5.1
 time.sleep((ORDER_TIME - datetime.now()).total_seconds())
 
 # print(f"Before Redirection: {datetime.now()}")
-driver.get("https://www.lazada.co.th/products/gege-bear-gege-bear-glossy-lip-glaze-lasting-moist-dudu-lip-pure-white-mirror-lipstick-i4954638252-s20826193059.html?dsource=share&laz_share_info=995414343_100_100_100043979789_995414343_null&laz_token=3f749a02e84368af77dde882d6bb6d38&exlaz=e_iqeJxmuQOjPGip8qo24MCSTeQCjDld4siVQ4kY1ODqrCXvTKdNAtBb55%2BgIiSkmNnXkPoNuoMIIpR8IEI%2FLi1U0sC6tUOx2TD3WnASIas1Y%3D&sub_aff_id=social_share&sub_id2=995414343&sub_id3=100043979789&sub_id6=CPI_EXLAZ")
+driver.get("https://www.lazada.co.th/products/restock-on-44-0000-am-local-timepop-mart-the-monsters-exciting-vinyl-face-blind-box-action-figures-i4924072141-s20729168260.html?dsource=share&laz_share_info=955346119_100_100_100019094477_955346119_null&laz_token=7f044f2270ec0b3dbcbfcc2d119acb94&dsource=share&laz_share_info=955342639_1_9300_100019094477_955342639_copy-linktool-campaign-default&laz_token=2c4d171a9f0c7d475b2fa9d46c2aff97&dsource=share&laz_share_info=988235748_1_9300_100205907756_988235748_copy-linktool-campaign-default&laz_token=824f34da9a31176a81e7c813bc38a117&trafficFrom=17449020_303586&laz_trackid=2:mm_287851169_159152655_2115952654:clkgk2dlf1ht21g8901c5f&mkttid=clkgk2dlf1ht21g8901c5f")
 # print(f"Redirection: {datetime.now()}")
 # get_element(driver, "input[step='1'][type='text'][autocomplete='off']").send_keys("2")
 # time.sleep(3)
 # print(f"Select Quantity: {datetime.now()}")
 # get_element(driver, ".add-to-cart-buy-now-btn.pdp-button_theme_yellow").click()
 # print(f"Checkout: {datetime.now()}")
-# time.sleep(1000)
+time.sleep(1000)
 
 driver.quit()
